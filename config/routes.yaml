@@ -1,0 +1,12 @@
+# This file is the entry point to configure your own HTTP routes.
+# Files in the routes/ subdirectory configure the routes for your dependencies.
+
+# config/routes.yaml
+
+# the "app_lucky_number" route name is not important yet
+app_invoice_register:
+    path: /invoice.dom
+    controller: App\Controller\MainController::index
+app_invoice_register2: 
+    path: /invoice.dom/lines_invoice
+    controller: App\Controller\InvoiceController::save_invoice
