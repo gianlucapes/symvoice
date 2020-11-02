@@ -36,7 +36,6 @@ class InvoiceController extends Controller {
             $id=$invoice->getId();
             $invoice_lines = new InvoiceLines();
             $idInvoice=$_POST['id_invoice'];
-            //$invoice = $this->InvoiceRepository->findByExampleField($invoice_lines);
             $invoice = $this->getDoctrine()->getRepository(Invoice::class)->find($idInvoice);
             if (!$invoice) {
              new Response('sorry the invoice you are referring to is not present in the database');
