@@ -34,7 +34,6 @@ class InvoiceController extends Controller {
         else if(isset($_POST['submit2']))
         {
             $id=$invoice->getId();
-            $entityMan = $this->getDoctrine()->getManager();
             $invoice_lines = new InvoiceLines();
             $idInvoice=$_POST['id_invoice'];
             //$invoice = $this->InvoiceRepository->findByExampleField($invoice_lines);
